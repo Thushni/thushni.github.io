@@ -693,15 +693,36 @@ section,
   align-items: center;
   justify-content: center;
 }
-
 .hero img {
-  position: absolute;
-  inset: 0;
-  display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  z-index: 1;
+  width: 300px; /* Size of the circle */
+  height: 350px; /* Size of the circle */
+  border-radius: 50%; /* Creates the circular effect */
+  position: absolute; /* For precise placement */
+  top: 200px; /* Distance from the top */
+  right: 200px; /* Distance from the right */
+
+  
+  object-position: center; /* Centers the image */
+  transform: scale(1.2); /* Zoom in: increase the scale value as needed */
+  border: 10px solid transparent; /* Transparent border for glitter effect */
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  animation: glitter 2s infinite linear; /* Apply the glitter animation */
+}
+
+/* Glitter animation */
+@keyframes glitter {
+  0% {
+    border-color: #ff80ab; /* Light pink */
+    box-shadow: 0 0 5px #ff80ab, 0 0 20px #ff80ab;
+  }
+  50% {
+    border-color: #ff4081; /* Bright pink */
+    box-shadow: 0 0 5px #ff4081, 0 0 25px #ff4081;
+  }
+  100% {
+    border-color: #ff80ab; /* Back to light pink */
+    box-shadow: 0 0 10px #ff80ab, 0 0 20px #ff80ab;
+  }
 }
 
 .hero .container {
@@ -1240,14 +1261,24 @@ section,
   }
 }
 
+.portfolio-content img {
+  width: 350px; /* Set a uniform width */
+  height: 350px; /* Set a uniform height */
+  object-fit: cover; /* Ensures the image is cropped to fit the size */
+  border-radius: 10px; /* Optional: Add rounded corners */
+  box-shadow: 0 6px 6px rgba(0, 0, 0, 0.1); /* Optional: Add shadow for a polished look */
+  border: 2px solid #ddd; /* Optional: Add a border */
+  transition: transform 0.3s ease; /* Optional: Add hover effect */
+}
+
+.portfolio-content img:hover {
+  transform: scale(1.05); /* Slight zoom effect on hover */
+}
 .portfolio .portfolio-content {
   position: relative;
   overflow: hidden;
 }
 
-.portfolio .portfolio-content img {
-  transition: 0.3s;
-}
 
 .portfolio .portfolio-content .portfolio-info {
   opacity: 0;
@@ -1291,8 +1322,8 @@ section,
   line-height: 1.2;
 }
 
-.portfolio .portfolio-content .portfolio-info .preview-link:hover,
-.portfolio .portfolio-content .portfolio-info .details-link:hover {
+.portfolio .portfolio-content .portfolio-info ,
+.portfolio .portfolio-content .portfolio-info  {
   color: var(--accent-color);
 }
 
