@@ -1505,3 +1505,28 @@ section,
 .contact .php-email-form button[type=submit]:hover {
   background: color-mix(in srgb, var(--accent-color), transparent 20%);
 }
+
+/* Custom Pink Button Style */
+.btn-pink {
+  background-color: #ff007f; /* Bright pink color */
+  color: white; /* Text color */
+  border: none;
+  padding: 10px 20px; /* Padding for a nice size */
+  font-size: 16px;
+  border-radius: 30px; /* Rounded corners */
+  font-weight: bold; /* Bold text */
+  transition: all 0.3s ease; /* Smooth transition for hover effect */
+}
+
+/* Hover Effect */
+.btn-pink:hover {
+  background-color: #ff3399; /* Slightly lighter pink on hover */
+  transform: scale(1.05); /* Slight zoom effect on hover */
+  box-shadow: 0px 4px 8px rgba(255, 0, 127, 0.3); /* Soft shadow for professional look */
+}
+
+/* Button focus effect */
+.btn-pink:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(255, 0, 127, 0.5); /* Focus ring */
+}
